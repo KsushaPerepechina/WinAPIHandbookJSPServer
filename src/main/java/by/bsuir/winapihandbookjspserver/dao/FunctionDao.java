@@ -29,7 +29,7 @@ public class FunctionDao {
         ResultSet rs;
         List<WinAPIFunction> list = new ArrayList<>();
         SQL = "SELECT * " +
-                "FROM winapi_function";
+                "FROM winapi_function;";
 
         rs = database.getConnection().createStatement().executeQuery(SQL);
 
@@ -45,14 +45,12 @@ public class FunctionDao {
         PreparedStatement preparedStatement;
 
         SQL = "INSERT INTO winapi_function(name, params, return_value, description) " +
-                "VALUES(?, ?, ?, ?) " +
-                "ON DUPLICATE KEY UPDATE name=?;";
+                "VALUES(?, ?, ?, ?);";
         preparedStatement = database.getConnection().prepareStatement(SQL);
         preparedStatement.setString(1, function.getName());
         preparedStatement.setString(2, function.getParams());
         preparedStatement.setString(3, function.getReturnValue());
         preparedStatement.setString(4, function.getDescription());
-        preparedStatement.setString(5, function.getName());
         int status = preparedStatement.executeUpdate();
         return status;
     }
@@ -61,9 +59,9 @@ public class FunctionDao {
         String SQL;
         PreparedStatement preparedStatement;
         SQL = "DELETE FROM winapi_function " +
-                "WHERE id=?;";
+                "WHERE name=?;";
         preparedStatement = database.getConnection().prepareStatement(SQL);
-        preparedStatement.setInt(1, function.getId());
+        preparedStatement.setString(1, function.getName());
         preparedStatement.executeUpdate();
     }
 
@@ -73,13 +71,13 @@ public class FunctionDao {
 
         SQL = "UPDATE winapi_function " +
                 "SET name=?, params=?, return_value=?, description=? " +
-                "WHERE id=?;";
+                "WHERE name=?;";
         preparedStatement = database.getConnection().prepareStatement(SQL);
         preparedStatement.setString(1, function.getName());
         preparedStatement.setString(2, function.getParams());
         preparedStatement.setString(3, function.getReturnValue());
         preparedStatement.setString(4, function.getDescription());
-        preparedStatement.setInt(5, function.getId());
+        preparedStatement.setString(5, function.getName());
         preparedStatement.executeUpdate();
     }
 

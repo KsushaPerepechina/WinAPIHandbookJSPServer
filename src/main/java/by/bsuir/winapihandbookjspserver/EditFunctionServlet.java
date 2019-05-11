@@ -35,7 +35,7 @@ public class EditFunctionServlet extends HttpServlet {
             request.getServletContext().getRequestDispatcher("/WEB-INF/views/view_functions.jsp").forward(request, response);
         }
 
-        request.setAttribute("t", function);
+        request.setAttribute("f", function);
         request.setAttribute("errorMessage", errorMessage);
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/edit_function.jsp").forward(request, response);

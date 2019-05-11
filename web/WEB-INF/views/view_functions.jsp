@@ -27,14 +27,14 @@
             <th colspan="2"></th>
         </tr>
 
-        <c:forEach items="${list}" var="t">
+        <c:forEach items="${list}" var="f">
             <tr>
-                <td>${t.name}</td>
-                <td>${t.params}</td>
-                <td>${t.returnValue}</td>
-                <td>${t.description}</td>
-                <td><a href="editFunction?id=${t.id}">Edit</a></td>
-                <td><a href="deleteFunction?id=${t.id}">Delete</a></td>
+                <td>${f.name}</td>
+                <td>${f.params}</td>
+                <td>${f.returnValue}</td>
+                <td>${f.description}</td>
+                <td><a href="editFunction?id=${f.id}">Edit</a></td>
+                <td><a href="deleteFunction?id=${f.id}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>

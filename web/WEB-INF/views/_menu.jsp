@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <ul class="topnav">
     <li><a class="active" href="${pageContext.request.contextPath}/">Home</a></li>
-    <li><a href="${pageContext.request.contextPath}/viewTechnologies">View all</a></li>
-    <li><a href="${pageContext.request.contextPath}/addTechnology">Add</a></li>
+    <li><a href="${pageContext.request.contextPath}/viewFunctions">View all</a></li>
+    <li><a href="${pageContext.request.contextPath}/addFunction">Add</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn", style="display: ${login_display}">Log in</a>
         <div class="dropdown-content">

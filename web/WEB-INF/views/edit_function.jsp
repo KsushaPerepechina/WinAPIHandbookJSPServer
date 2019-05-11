@@ -16,21 +16,20 @@
         <p class="error">${errorMessage}</p>
     </div>
 
-    <c:if test="${not empty t}">
+    <c:if test="${not empty f}">
         <form method="POST" action="${pageContext.request.contextPath}/editFunction">
-            <input type="hidden" name="id" value="${t.id}"/>
-
+            <input type="hidden" name="id" value="${f.id}"/>
             <label> Name:
-                <input type="text" name="name" value="${ t.name != null ? t.name : "" }"/>
+                <input type="text" name="name" value="${ f.name != null ? f.name : "" }"/>
             </label>
             <label> Params
-                <textarea name="params" cols="40" rows="4">${t.params != null ? t.params : "" }</textarea>
+                <textarea name="params" cols="40" rows="4">${f.params != null ? f.params : "" }</textarea>
             </label>
             <label> Return value
-                <textarea name="return_value" cols="40" rows="4">${t.returnValue != null ? t.returnValue : "" }</textarea>
+                <textarea name="return_value" cols="40" rows="4">${f.returnValue != null ? f.returnValue : "" }</textarea>
             </label>
             <label> Description
-                <textarea name="description" cols="40" rows="4">${t.description != null ? t.description : "" }</textarea>
+                <textarea name="description" cols="40" rows="4">${f.description != null ? f.description : "" }</textarea>
             </label>
             <div class="centered">
                 <input type="submit" value="Submit"/>

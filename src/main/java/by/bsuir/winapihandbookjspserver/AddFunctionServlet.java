@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(urlPatterns = { "/addFunction"})
+@WebServlet(urlPatterns = {"/addFunction"})
 public class AddFunctionServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(ViewFunctionsServlet.class);
 
@@ -28,7 +28,7 @@ public class AddFunctionServlet extends HttpServlet {
         function.setName(request.getParameter("name"));
         function.setParams(request.getParameter("params"));
         function.setReturnValue(request.getParameter("return_value"));
-        function.setDescription(request.getParameter("description"));//TODO
+        function.setDescription(request.getParameter("description"));
 
         String errorMessage = null;
         try {

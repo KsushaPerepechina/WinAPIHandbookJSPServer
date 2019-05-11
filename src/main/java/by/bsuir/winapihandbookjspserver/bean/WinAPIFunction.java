@@ -10,6 +10,13 @@ public class WinAPIFunction {
     public WinAPIFunction() {
     }
 
+    public WinAPIFunction(String name, String params, String returnValue, String description) {
+        this.name = name;
+        this.params = params;
+        this.returnValue = returnValue;
+        this.description = description;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -48,5 +55,20 @@ public class WinAPIFunction {
 
     public void setDescription(String rDescription) {
         this.description = rDescription;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        WinAPIFunction that = (WinAPIFunction) o;
+        return (getName() != null ? getName().equals(that.getName()) : that.getName() == null)
+                && (getParams() != null ? getParams().equals(that.getParams()) : that.getParams() == null)
+                && (getReturnValue() != null ? getReturnValue().equals(that.getReturnValue()) : that.getReturnValue() == null)
+                && (getDescription() != null ? getDescription().equals(that.getDescription()) : that.getDescription() == null);
     }
 }
