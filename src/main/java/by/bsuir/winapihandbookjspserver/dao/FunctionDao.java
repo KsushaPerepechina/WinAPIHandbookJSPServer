@@ -10,6 +10,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Объект доступа к данным базы данных, реализующий CRUD-функции.
+ */
 public class FunctionDao {
     private static final Logger log;
     private static Database database;
@@ -24,6 +27,11 @@ public class FunctionDao {
         }
     }
 
+    /**
+     * Получение всех записей справочника.
+     * @return list - список функций
+     * @throws SQLException
+     */
     public static List<WinAPIFunction> getAllFunctions() throws SQLException {
         String SQL;
         ResultSet rs;
@@ -40,6 +48,12 @@ public class FunctionDao {
         return list;
     }
 
+    /**
+     * Добавление записи в справочник.
+     * @param function - добавляемая функция
+     * @return status - статус обновления
+     * @throws SQLException
+     */
     public static int addFunction(WinAPIFunction function) throws SQLException {
         String SQL;
         PreparedStatement preparedStatement;
@@ -55,6 +69,11 @@ public class FunctionDao {
         return status;
     }
 
+    /**
+     * Удаление записи из справочника.
+     * @param function - удаляемая функция
+     * @throws SQLException
+     */
     public static void deleteFunction(WinAPIFunction function) throws SQLException {
         String SQL;
         PreparedStatement preparedStatement;
@@ -65,6 +84,11 @@ public class FunctionDao {
         preparedStatement.executeUpdate();
     }
 
+    /**
+     * Обновление записи справочника.
+     * @param function - обновляемая функция
+     * @throws SQLException
+     */
     public static void updateFunction(WinAPIFunction function) throws SQLException {
         String SQL;
         PreparedStatement preparedStatement;
@@ -81,6 +105,12 @@ public class FunctionDao {
         preparedStatement.executeUpdate();
     }
 
+    /**
+     * Получение записи справочника по идентификатору.
+     * @param id - идентификатор функции
+     * @return искомая функция
+     * @throws SQLException
+     */
     public static WinAPIFunction getFunctionById(Integer id) throws SQLException {
         String SQL;
         ResultSet rs;
@@ -97,6 +127,12 @@ public class FunctionDao {
         return fromResultSetToObject(rs);
     }
 
+    /**
+     * Маршализация выборки из БД в объект функции.
+     * @param rs - результирующее множество выборки
+     * @return function - преобразуемая функция
+     * @throws SQLException
+     */
     private static WinAPIFunction fromResultSetToObject(ResultSet rs) throws SQLException {
         WinAPIFunction function = new WinAPIFunction();
         function.setId(rs.getInt("id"));

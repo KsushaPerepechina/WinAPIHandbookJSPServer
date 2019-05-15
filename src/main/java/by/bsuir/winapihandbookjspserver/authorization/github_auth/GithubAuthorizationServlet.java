@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
+/**
+ * Сервлет авторизации через гитхаб.
+ */
 @WebServlet(urlPatterns = {"/github.auth"})
 public class GithubAuthorizationServlet extends HttpServlet {
 

@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * Сервлет для удаления функции из справочника.
+ */
 @WebServlet(urlPatterns = {"/deleteFunction"})
 public class DeleteFunctionServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(ViewFunctionsServlet.class);

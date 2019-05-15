@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * Сервлет добавления новой функции в справочник.
+ */
 @WebServlet(urlPatterns = {"/addFunction"})
 public class AddFunctionServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(ViewFunctionsServlet.class);

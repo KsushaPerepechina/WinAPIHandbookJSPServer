@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ResourceBundle;
 
-
+/**
+ * Сервлет авторизации через гугл.
+ */
 @WebServlet(urlPatterns = {"/google.auth"})
 public class GoogleAuthorizationServlet extends HttpServlet {
 

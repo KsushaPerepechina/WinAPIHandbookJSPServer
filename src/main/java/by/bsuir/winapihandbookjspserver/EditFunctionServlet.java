@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * Сервлет для редактирования функции справочника.
+ */
 @WebServlet(urlPatterns = { "/editFunction"})
 public class EditFunctionServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(ViewFunctionsServlet.class);

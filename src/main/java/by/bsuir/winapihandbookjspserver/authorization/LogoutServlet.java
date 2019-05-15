@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Сервлет для логаута.
+ */
 @WebServlet(urlPatterns = "/logout")
 public class LogoutServlet extends HttpServlet {
 

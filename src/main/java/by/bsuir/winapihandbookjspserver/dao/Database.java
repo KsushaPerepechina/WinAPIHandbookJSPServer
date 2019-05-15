@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/**
+ * Класс для установления соединения с базой данных.
+ */
 class Database {
     private String url = "";
     private String user = "";
@@ -20,6 +23,11 @@ class Database {
 
     }
 
+    /**
+     * Установление соединения с базой данных для указанного урла, пользователя и пароля.
+     * @return соединение с БД
+     * @throws SQLException
+     */
     Connection getConnection() throws SQLException {
         return DriverManager.getConnection(url, user, password);
     }

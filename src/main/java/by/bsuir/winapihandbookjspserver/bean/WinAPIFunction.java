@@ -1,5 +1,8 @@
 package by.bsuir.winapihandbookjspserver.bean;
 
+/**
+ * Bean функции справочника.
+ */
 public class WinAPIFunction {
     private Integer id = null;
     private String name = "";

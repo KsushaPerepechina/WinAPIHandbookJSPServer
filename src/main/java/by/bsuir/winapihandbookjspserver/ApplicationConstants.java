@@ -1,5 +1,8 @@
 package by.bsuir.winapihandbookjspserver;
 
+/**
+ * Постоянные программные переменные.
+ */
 public class ApplicationConstants {
 
     public static final String SESSION_LOGIN_STATE = "SESSION_LOGIN_STATE";

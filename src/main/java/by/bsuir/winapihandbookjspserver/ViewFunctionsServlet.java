@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Сервлет для просмотра имеющихся в справочнике функций.
+ */
 @WebServlet(urlPatterns = {"/viewFunctions"})
 public class ViewFunctionsServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(ViewFunctionsServlet.class);

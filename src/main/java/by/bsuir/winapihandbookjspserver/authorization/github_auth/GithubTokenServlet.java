@@ -22,6 +22,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
+/**
+ * Севлет для гитхаб токена.
+ */
 @WebServlet(urlPatterns = {"/github.token"})
 public class GithubTokenServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(GithubTokenServlet.class.getName());

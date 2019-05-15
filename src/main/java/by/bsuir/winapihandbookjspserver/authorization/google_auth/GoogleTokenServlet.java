@@ -22,6 +22,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
+/**
+ * Сервлет гугл токена.
+ */
 @WebServlet(urlPatterns = {"/google.token"})
 public class GoogleTokenServlet extends HttpServlet {
     private static final Logger log = LogManager.getLogger(GoogleTokenServlet.class.getName());

@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Фильтр авторизации.
+ */
 @WebFilter(urlPatterns = { "/addFunction", "/deleteFunction", "/editFunction" })
 public class AuthorizationFilter implements Filter {
     public void init(FilterConfig filterConfig) {
