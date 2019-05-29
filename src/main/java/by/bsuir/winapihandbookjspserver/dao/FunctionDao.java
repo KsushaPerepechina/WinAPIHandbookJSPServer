@@ -128,6 +128,28 @@ public class FunctionDao {
     }
 
     /**
+     * Получение записи справочника по имени.
+     * @param name - имя функции
+     * @return искомая функция
+     * @throws SQLException
+     */
+    public static WinAPIFunction getFunctionByName(String name) throws SQLException {
+        String SQL;
+        ResultSet rs;
+
+        SQL = "SELECT * " +
+                "FROM winapi_function " +
+                "WHERE name = ?;";
+
+        PreparedStatement statement = database.getConnection().prepareStatement(SQL);
+        statement.setString(1, name);
+        rs = statement.executeQuery();
+        rs.next();
+
+        return fromResultSetToObject(rs);
+    }
+
+    /**
      * Маршализация выборки из БД в объект функции.
      * @param rs - результирующее множество выборки
      * @return function - преобразуемая функция

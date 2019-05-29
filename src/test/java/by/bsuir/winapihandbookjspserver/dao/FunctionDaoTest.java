@@ -77,6 +77,12 @@ public class FunctionDaoTest {
         Assert.assertEquals(function, FunctionDao.getFunctionById(funcId));
     }
 
+    @Test
+    public void getFunctionByName() throws SQLException {
+        Assert.assertEquals(function, FunctionDao.getFunctionByName(function.getName()));
+    }
+
+
     private static boolean containsAll(List<WinAPIFunction> list, List<WinAPIFunction> sublist){
         int elementsNumber = 0;
         for (WinAPIFunction function: list) {
