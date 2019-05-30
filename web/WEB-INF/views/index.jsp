@@ -5,7 +5,7 @@
 </style>
 
 <head>
-    <title>WinAPI Handbook</title>
+    <title>Win API Handbook</title>
 </head>
 
 <body>

@@ -7,12 +7,12 @@
     <display-name>winapihandbookjspserver</display-name>
 
     <servlet>
-        <servlet-name>WinAPI Handbook</servlet-name>
+        <servlet-name>Win API Handbook</servlet-name>
         <servlet-class>by.bsuir.winapihandbookjspserver.HomePageServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>WinAPI Handbook</servlet-name>
+        <servlet-name>Win API Handbook</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

@@ -14,7 +14,7 @@
     <jsp:include page="_header.jsp"/>
 
     <div class="centered">
-        <h3>WinAPI Functions</h3>
+        <h3>Win API Functions</h3>
         <p class="error">${errorMessage}</p>
     </div>
 
