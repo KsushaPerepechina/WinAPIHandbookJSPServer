@@ -1,6 +1,7 @@
 package by.bsuir.winapihandbookjspserver;
 
 import by.bsuir.winapihandbookjspserver.dao.FunctionDao;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -22,4 +23,6 @@ public class ViewFunctionsServletTest {
     @InjectMocks
     private ViewFunctionsServlet servlet;
 
+    @Test
+    public void doPost(){}
 }
